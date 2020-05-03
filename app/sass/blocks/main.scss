@@ -1,0 +1,11 @@
+html,
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $main-fonts;
+}
+
