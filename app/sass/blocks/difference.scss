@@ -1,0 +1,50 @@
+.difference {
+  display: flex;
+  justify-content: space-between;
+  width: 63.8%;
+  max-width: 600px;
+}
+
+.difference__parameters,
+.difference__values {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.difference__parameters {
+  width: 27%;
+  min-width: 155px;
+  margin-right: auto;
+  text-align: right;
+}
+
+.difference__values {
+  width: 35%;
+}
+
+.difference__values--other {
+  border: 1px solid #e8e8e8;
+}
+
+.difference__values--advo{
+  background-color: #26b83a;
+  .difference__value {
+    color: #ffffff;
+  }
+}
+
+.difference__parameter,
+.difference__value {
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 3.46;
+}
+
+.difference__parameter--title {
+  color: transparent;
+}
+
+.difference__value {
+  text-align: center;
+}

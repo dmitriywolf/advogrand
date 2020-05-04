@@ -1,0 +1,62 @@
+.app {
+  background-color: $bg-color;
+  background-image: url('../img/bg-app.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.app__inner {
+  position: relative;
+  color: #ffffff;
+
+
+  .section__title {
+    max-width: 480px;
+    text-align: left;
+    color: #ffffff;
+  }
+}
+
+.app__list {
+  max-width: 540px;
+  padding-left: 15px;
+  list-style-type: decimal;
+}
+
+.app__item {
+  padding: 12px 0;
+  font-size: 18px;
+  font-weight: 300;
+
+  color: #e41e1e;
+
+  span {
+    padding-left: 15px;
+    display: block;
+    color: #ffffff;
+  }
+
+  a {
+    color: #ffffff;
+    text-decoration: underline;
+    transition: 0.5s linear;
+
+    &:hover {
+      color: $hover-color;
+    }
+  }
+}
+
+.app__links {
+  position: absolute;
+  top: 25px;
+  right: 50px;
+
+  display: flex;
+  flex-direction: column;
+
+  a {
+    margin: 15px 0;
+  }
+}

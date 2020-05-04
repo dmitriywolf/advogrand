@@ -1,0 +1,37 @@
+.tariffs-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tariffs-menu__text {
+  font-weight: 300;
+}
+
+.tariffs-menu__links {
+  display: flex;
+  justify-content: space-between;
+  max-width: 280px;
+}
+
+.tariffs-menu__link {
+  padding: 0 12px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 2.22;
+  text-transform: uppercase;
+  color: #313131;
+  transition: 0.5s;
+  border: 2px solid transparent;
+
+  &:hover {
+    cursor: pointer;
+    color: #e50000;
+  }
+}
+
+.tariffs-menu__link.is-active {
+  color: #e50000;
+  border: 2px solid #e50000;
+  border-radius: 4px;
+}

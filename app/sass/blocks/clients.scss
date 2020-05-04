@@ -1,0 +1,35 @@
+.clients {
+  width: 31.9%;
+  max-width: 300px;
+}
+
+.clients__title {
+  padding-bottom: 15px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.client__item {
+  display: flex;
+  align-items: center;
+}
+
+.client__icon-wrapper {
+  min-width: 25px;
+}
+
+.client__text {
+  padding-left: 20px;
+  font-weight: 300;
+  line-height: 2.81;
+
+  b {
+    font-weight: 700;
+  }
+}
+
+.clients__button {
+  width: 100%;
+  margin-top: 25px;
+  line-height: 3.61;
+}

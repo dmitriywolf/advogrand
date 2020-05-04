@@ -1,0 +1,28 @@
+.reviews-menu {
+  display: flex;
+  justify-content: space-between;
+
+  max-width: 670px;
+  margin: 0 auto;
+}
+
+.reviews-menu__item {
+  padding: 0 12px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 2.22;
+  text-transform: uppercase;
+  color: #313131;
+  transition: 0.5s;
+
+  &:hover {
+    cursor: pointer;
+    color: #e50000;
+  }
+}
+
+.reviews-menu__item.is-active {
+  color: #e50000;
+  border: 2px solid #e50000;
+  border-radius: 4px;
+}

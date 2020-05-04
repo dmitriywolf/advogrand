@@ -1,0 +1,23 @@
+.tariffs {
+  background-color: $bg-color;
+}
+
+.tariffs__inner {
+
+  .section__title {
+    padding-bottom: 32px;
+    text-align: left;
+    color: #313131;
+  }
+
+  .section__subtitle {
+    max-width: 680px;
+    font-size: 18px;
+    font-weight: 600;
+  }
+}
+
+.tariffs__nav {
+  padding: 35px 0 30px;
+}
+
