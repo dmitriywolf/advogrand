@@ -1,0 +1,33 @@
+.process {
+  background-color: $bg-color;
+}
+
+.process__list {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0 10px
+}
+
+.process__item {
+  width: 33.33%;
+  padding: 0 10px;
+}
+
+.process__img-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 90px;
+  margin-bottom: 50px;
+}
+
+.process__text {
+  font-weight: 300;
+  text-align: center;
+  color: #1c1c1c;
+
+  b {
+    font-weight: 700;
+  }
+
+}

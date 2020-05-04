@@ -1,5 +1,5 @@
 .intro {
-  background-color: #7a7b7c;
+  background-color: $bg-color;
   background-image: url('../img/bg-intro.jpg');
   background-repeat: no-repeat;
   background-position: center;
@@ -8,8 +8,6 @@
 
 .intro__inner {
   padding: 120px 0 130px;
-
-
   color: #ffffff;
 }
 
@@ -24,14 +22,12 @@
     font-weight: 800;
     text-transform: uppercase;
   }
-
 }
 
 .intro__subtitle {
   max-width: 400px;
   padding-top: 32px;
   padding-bottom: 60px;
-
   font-size: 24px;
   font-weight: 300;
   line-height: 1.3;
@@ -45,6 +41,4 @@
 .intro__button {
   padding: 0 46px;
   line-height: 3.61;
-
-
 }

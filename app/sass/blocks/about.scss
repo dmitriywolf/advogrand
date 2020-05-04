@@ -1,0 +1,52 @@
+.about {
+  background-color: $bg-color;
+  background-image: url('../img/bg-about.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.about__inner {
+  color: #ffffff;
+
+  .section__title {
+    color: #ffffff;
+  }
+}
+
+.about__text {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 10px 0;
+  font-weight: 300;
+  text-align: center;
+}
+
+.about__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 75px 40px 0;
+}
+
+.about__item {
+  width: 25%;
+}
+
+.about__value {
+  padding-bottom: 15px;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+
+  span {
+    font-size: 24px;
+  }
+}
+
+.about__parameter {
+  font-weight: 300;
+  text-align: center;
+}
+

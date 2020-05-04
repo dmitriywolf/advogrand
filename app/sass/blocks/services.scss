@@ -1,0 +1,40 @@
+.services__inner {
+  margin-bottom: -90px;
+}
+
+.services__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.services__item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 31.91%;
+  margin-bottom: 90px;
+}
+
+.services__img {
+  min-width: 80px;
+
+  img {
+    display: block;
+    margin-left: auto;
+  }
+}
+
+.services__text {
+  padding-left: 20px;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.375;
+  color: #1c1c1c;
+  transition: 0.5s linear;
+
+  &:hover {
+    color: #e61010;
+  }
+}
