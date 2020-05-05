@@ -1,0 +1,66 @@
+.header__inner {
+  display: flex;
+  justify-content: flex-end;
+  align-self: center;
+  padding: 20px 0;
+}
+
+.header__logo {
+  margin-right: auto;
+  img {
+    display: block;
+  }
+}
+
+.header__text {
+  margin-right: 84px;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 2.92;
+}
+
+.header__phone {
+  margin-right: 20px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 2.22;
+  color: $text-color;
+  transition: 0.5s linear;
+
+  &:hover {
+    color: $hover-color;
+  }
+}
+
+.header__download {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__top {
+  border-bottom: 1px solid #f4f4f4;
+
+  .header__inner {
+    padding: 10px 0;
+  }
+
+  .header__phone {
+    margin-right: auto;
+    font-size: 14px;
+    line-height: 2;
+  }
+
+  .header__button {
+    padding: 0 20px;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 2.5;
+  }
+}
+
+
+
+
+
+
+

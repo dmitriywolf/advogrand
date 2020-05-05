@@ -49,11 +49,59 @@
             </g>
         </symbol>
 
-
     </svg>
 </div>
 
-<header class="header"></header>
+<header class="header">
+    <div class="header__top">
+        <div class="container">
+            <div class="header__inner">
+                <a class="header__phone" href="tel:+7499322858*"> +7 499 322-85-80</a>
+                <nav class="nav">
+                    <button class="nav__burger"></button>
+                    <ul class="nav__list">
+                        <li><a class="nav__link" href="">Как мы работаем</a></li>
+                        <li><a class="nav__link" href="">Преимущества</a></li>
+                        <li><a class="nav__link" href="">Отзывы</a></li>
+                        <li><a class="nav__link" href="">Тарифы</a></li>
+                        <li><a class="nav__link" href="">Партнеры</a></li>
+                        <li><a class="nav__link" href="">Контакты</a></li>
+                    </ul> <!--/.nav__list-->
+                </nav> <!--nav-->
+                <button class="header__button button button--red">Перезвоните мне</button>
+            </div> <!--/.header__inner-->
+        </div> <!--/.container-->
+    </div> <!--/.header__top-->
+
+
+    <div class="container">
+        <div class="header__inner">
+            <a class="header__logo" href="#">
+                <img src="img/header-logo.png" alt="Логотип" width="190" height="40">
+            </a> <!--/.header__logo-->
+
+            <p class="header__text">Ваш личный юрист всегда на связи</p> <!--/.header__text-->
+
+            <a class="header__phone" href="tel:+7499322858*">+7 499 322-85-80</a>
+            <!--/.header__phone-->
+
+            <div class="header__download download">
+                <a class="download__item" href="#">
+                    <svg class="download__icon" width="19" height="21">
+                        <use xlink:href="#icon-android"></use>
+                    </svg>
+                </a>
+                <a class="download__item" href="#">
+                    <svg class="download__icon" width="16" height="20">
+                        <use xlink:href="#icon-apple"></use>
+                    </svg>
+                </a>
+            </div> <!--/.header__download /.download-->
+        </div> <!--/.header__inner-->
+    </div> <!--/.container-->
+
+</header> <!--/.header-->
+
 <main>
     <!--Intro-->
     <section class="intro">
@@ -403,12 +451,16 @@
                     </ul>
                 </div> <!--/.tariffs__nav /.tariffs-menu-->
 
-
                 <div class="tariffs__list">
-                    <div class="tariffs__item ">
-                        <h3 class="tariffs__item-title">Персональная карта <br><b>для Вас</b></h3>
-                        <img src="img/personal-standard.jpg" alt="Персональный Стандрат" width="200" height="126">
-                        <ul class="tariff__list">
+
+                    <div class="tariffs__item tariff">
+
+                        <div class="tariff__header">
+                            <h3 class="tariff__title">Персональная карта<br><b>для Вас</b></h3>
+                            <img src="img/tariffs/item-1.jpg" alt="Персональный Стандрат" width="200" height="126">
+                        </div> <!--/.tariff__header-->
+
+                        <ul class="tariff__parameters">
                             <li class="tariff__item">
                                 <span class="tariff__parameter">Устные консультации</span>
                                 <span class="tariff__value">2 в месяц</span>
@@ -429,20 +481,28 @@
                                 <span class="tariff__parameter">Содействие в переговорах</span>
                                 <span class="tariff__value">1 в месяц</span>
                             </li>
-                        </ul>
-                        <div class="price">
-                            <p class="price__text">Цена:</p>
-                            <p class="price__value">65 $ за год</p>
+                        </ul> <!--/.tariff__parameters-->
+
+                        <div class="price__wrapper">
+                            <div class="price">
+                                <p class="price__text">Цена:</p>
+                                <p class="price__value">65 $ за год</p>
+                            </div>
+                            <div class="price__buttons">
+                                <button class="price__button button button--red">Консультация</button>
+                                <button class="price__button button button--grey">Купить</button>
+                            </div>
+                        </div> <!--/.price__wrapper-->
+
+                    </div> <!--/.tariffs__item tariff-->
+
+                    <div class="tariffs__item tariff">
+                        <div class="tariff__header">
+                            <h3 class="tariff__title">Карта <br><b>для всей семьи</b></h3>
+                            <img src="img/tariffs/item-2.jpg" alt="Семейный Стандрат" width="200" height="126">
                         </div>
-                        <div class="button__wrapper">
-                            <a class="tariff__button button button--red" href="#">Консультация</a>
-                            <a class="tariff__button button button--grey" href="#">Купить</a>
-                        </div>
-                    </div>
-                    <div class="tariffs__item tariffs__item--big">
-                        <h3 class="tariffs__item-title">Карта <br><b>для всей семьи</b></h3>
-                        <img src="img/family-standard.jpg" alt="Семейный Стандрат" width="200" height="126">
-                        <ul class="tariff__list">
+
+                        <ul class="tariff__parameters">
                             <li class="tariff__item">
                                 <span class="tariff__parameter">Устные консультации</span>
                                 <span class="tariff__value">2 в месяц</span>
@@ -466,20 +526,28 @@
                             <li class="tariff__item">
                                 Сервис для всей семьи
                             </li>
-                        </ul>
-                        <div class="price">
-                            <p class="price__text">Цена:</p>
-                            <p class="price__value">65 $ за год</p>
-                        </div>
-                        <div class="button__wrapper">
-                            <a class="tariff__button button button--green" href="#">Консультация</a>
-                            <a class="tariff__button button button--grey" href="#">Купить</a>
-                        </div>
-                    </div>
-                    <div class="tariffs__item">
-                        <h3 class="tariffs__item-title">Карта<br> <b>для бизнема</b></h3>
-                        <img src="img/business-standard.jpg" alt="Бизнес Стандрат" width="200" height="126">
-                        <ul class="tariff__list">
+                        </ul> <!--/.tariff__parameters-->
+
+                        <div class="price__wrapper">
+                            <div class="price">
+                                <p class="price__text">Цена:</p>
+                                <p class="price__value">130 $ за год</p>
+                            </div>
+                            <div class="price__buttons">
+                                <button class="price__button button button--red">Консультация</button>
+                                <button class="price__button button button--grey">Купить</button>
+                            </div>
+                        </div> <!--/.price__wrapper-->
+                    </div> <!--/.tariffs__item tariff-->
+
+                    <div class="tariffs__item tariff">
+
+                        <div class="tariff__header">
+                            <h3 class="tariffs__item-title">Карта<br> <b>для бизнема</b></h3>
+                            <img src="img/tariffs/item-3.jpg" alt="Бизнес Стандрат" width="200" height="126">
+                        </div> <!--/.tariff__header-->
+
+                        <ul class="tariff__parameters">
                             <li class="tariff__item">
                                 <span class="tariff__parameter">Устные консультации</span>
                                 <span class="tariff__value">2 в месяц</span>
@@ -509,74 +577,89 @@
                             <li class="tariff__item tariff__item--big">
                                 Обзор изменения<br> в законодательсве
                             </li>
-                        </ul>
-                        <div class="price">
-                            <p class="price__text">Цена:</p>
-                            <p class="price__value">65 $ за год</p>
-                        </div>
-                        <div class="button__wrapper">
-                            <a class="tariff__button button button--blue" href="#">Консультация</a>
-                            <a class="tariff__button button button--grey" href="#">Купить</a>
-                        </div>
-                    </div>
-                </div>
+                        </ul>  <!--/.tariff__parameters-->
 
+                        <div class="price__wrapper">
+                            <div class="price">
+                                <p class="price__text">Цена:</p>
+                                <p class="price__value">265 $ за год</p>
+                            </div>
+                            <div class="price__buttons">
+                                <button class="price__button button button--red">Консультация</button>
+                                <button class="price__button button button--grey">Купить</button>
+                            </div>
+                        </div> <!--/.price__wrapper-->
+
+                    </div> <!--/.tariffs__item tariff-->
+
+                </div>  <!--/.tariffs__list-->
 
             </div> <!--/.tariffs__inner-->
         </div> <!--/.container-->
     </section> <!--/.tariffs-->
 
+    <!--Contacts-->
     <section class="contacts">
         <div class="container">
             <div class="contacts__inner">
-                <form class="form__contacts" action="#">
-                    <fieldset>
-                        <legend>Напишите нам письмо или задайте свой вопрос</legend>
-                        <div class="input__wrapper">
-                            <label class="label" for="name">Введите своё имя</label><br>
-                            <input class="input" id="name" type="text">
-                        </div>
-                        <div class="input__wrapper">
-                            <label class="label" for="phone">Ваш номер телефона</label><br>
-                            <input class="input" id="phone" type="tel">
-                        </div>
-                        <div class="input__wrapper">
-                            <label class="label" for="textarea">Сообщение или вопрос</label><br>
-                            <textarea class="textarea" name="your-question" id="textarea"></textarea>
-                        </div>
-                        <a class="form__button button button--red" href="#">Заказать звонок консультанта</a>
-                    </fieldset>
-                    <p class="form__text">Перезвоним вам в течении 5 минут</p>
-                </form>
+                <div class="consultation">
+                    <form class="consultation__form form" action="#">
+                        <h3 class="form__title">Напишите нам письмо или задайте свой вопрос</h3>
+                        <div class="form__input-wrapper">
+                            <label class="form__label" for="name">Введите своё имя</label>
+                            <input class="form__input" id="name" type="text">
+                        </div> <!--/.form__input-wrapper-->
+                        <div class="form__input-wrapper">
+                            <label class="form__label" for="phone">Ваш номер телефона</label>
+                            <input class="form__input" id="phone" type="tel">
+                        </div> <!--/.form__input-wrapper-->
+                        <div class="form__input-wrapper">
+                            <label class="form__label" for="textarea">Сообщение или вопрос</label>
+                            <textarea class="form__textarea" name="your-question" id="textarea"></textarea>
+                        </div> <!--/.form__input-wrapper-->
+                        <button class="form__button button button--red" type="submit">Заказать звонок консультанта
+                        </button>
+                        <p class="form__text">Перезвоним вам в течении 5 минут</p>
+                    </form> <!--/.consultation__form-->
+                </div> <!--/.consultation-->
+                <div class="contact">
+                    <div class="contact__inner">
+                        <h3 class="contact__title">Контакты</h3>
 
+                        <div class="contact__item">
+                            <p class="contact__text">Телефон для покупки карт:</p>
+                            <a class="contact__value contact--tel" href="tel:+7499322858*">+7 499 322-85-80</a>
+                        </div> <!--/.contact__item-->
 
-                <div class="contact__wrapper">
-                    <h3 class="contact__title">Контакты</h3>
-                    <div class="contact__item">
-                        <p class="contact_text">Телефон для покупки карт:</p>
-                        <p class="contact__value contact__value--phone">+7 499 322-85-80</p>
-                    </div>
-                    <div class="contact__item">
-                        <p class="contact_text">Email:</p>
-                        <a class="contact__value contact__value--email" href="mailto:dmitriyvolchenko@ukr.net">info@advogrand.net</a>
-                    </div>
+                        <div class="contact__item">
+                            <p class="contact__text">Email:</p>
+                            <a class="contact__value contact--mail" href="mailto:dmitriyvolchenko@ukr.net">info@advogrand.net</a>
+                        </div> <!--/.contact__item-->
 
-                    <div class="contact__item">
-                        <p class="contact_text">Время работы:</p>
-                        <p class="contact__value contact__value--time">С понедельника по пятницу: <br>
-                            9:00 &#8211; 22:00</p>
-                        <p class="contact__value contact__value--time">В праздничные и выходные дни: <br>
-                            только телефонные консультации<br>
-                            10:00 &#8211; 20:00
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
+                        <div class="contact__item">
+                            <p class="contact__text">Время работы:</p>
+                            <p class="contact__value">С понедельника по пятницу: <br>9:00 &#8211; 22:00</p>
+                            <p class="contact__value">В праздничные и выходные дни: <br>
+                                только телефонные консультации 10:00 &#8211; 20:00
+                            </p>
+                        </div> <!--/.contact__item-->
+                    </div> <!--/.contact__inner-->
+                </div> <!--/.contact-->
+            </div> <!--/.contacts__inner-->
+        </div> <!--/.container-->
+    </section> <!--/.contacts-->
 </main>
+
+<!--Footer-->
+<footer class="footer">
+    <div class="container">
+        <div class="footer__inner">
+            <a class="footer__logo" href="#">
+                <img src="img/footer-logo.png" alt="Логотип" width="190" height="40">
+            </a> <!--/.footer__logo-->
+        </div> <!--/.footer__inner-->
+    </div> <!--/.container-->
+</footer> <!--/.footer-->
 
 </body>
 </html>

@@ -1,0 +1,29 @@
+.nav__burger {
+  display: none;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav__list {
+  display: flex;
+  justify-content: space-between;
+
+  li {
+    margin: 0 15px;
+  }
+}
+
+.nav__link {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 2.14;
+  color: $text-color;
+  transition: 0.5s linear;
+
+  &:hover {
+    color: $hover-color;
+  }
+}

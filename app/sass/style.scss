@@ -5,6 +5,11 @@
 @import "blocks/container";
 @import "blocks/section";
 
+/*Header*/
+@import "blocks/header";
+@import "blocks/download";
+@import "blocks/nav";
+
 /*Intro*/
 @import "blocks/intro";
 
@@ -29,11 +34,24 @@
 @import "blocks/reviews";
 @import "blocks/reviews-menu";
 
-
 /*Partners*/
 @import "blocks/partners";
+
+
 
 
 /*Tariffs*/
 @import "blocks/tariffs";
 @import "blocks/tariffs-menu";
+
+
+
+
+/*Contacts*/
+@import "blocks/contacts";
+@import "blocks/consultation";
+@import "blocks/form";
+@import "blocks/contact";
+
+/*Footer*/
+@import "blocks/footer";

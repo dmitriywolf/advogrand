@@ -1,0 +1,22 @@
+.download__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  margin-left: 10px;
+  border: 1px solid #e42626;
+  border-radius: 4px;
+  transition: 0.5s linear;
+
+  &:hover,
+  &:hover .download__icon {
+    border-color: #0a1e52;
+    fill: #0a1e52;
+  }
+}
+
+.download__icon {
+  fill: #e42626;
+  transition: 0.5s linear;
+}
