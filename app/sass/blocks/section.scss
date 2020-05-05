@@ -10,3 +10,47 @@
   text-align: center;
   color: #1c1c1c;
 }
+
+@media (max-width: 900px) {
+  .section {
+    padding: 75px 0;
+  }
+
+  .section__title {
+    padding-bottom: 55px;
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 50px 0;
+  }
+
+  .section__title {
+    padding-bottom: 45px;
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 600px) {
+  .section {
+    padding: 40px 0;
+  }
+
+  .section__title {
+    padding-bottom: 40px;
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 420px) {
+  .section {
+    padding: 35px 0;
+  }
+
+  .section__title {
+    padding-bottom: 30px;
+    font-size: 22px;
+  }
+}

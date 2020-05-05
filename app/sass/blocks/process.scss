@@ -29,5 +29,47 @@
   b {
     font-weight: 600;
   }
+}
 
+@media (max-width: 900px) {
+  .process__img-wrapper {
+    margin-bottom: 45px;
+  }
+}
+
+@media (max-width: 768px) {
+  .process__list {
+    padding: 10px 0 5px;
+  }
+
+  .process__img-wrapper {
+    margin-bottom: 30px;
+  }
+
+  .process__text {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  .process__list {
+    flex-wrap: wrap;
+  }
+
+  .process__item {
+    width: 50%;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 420px) {
+  .process__item {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 0 15px;
+  }
+
+  .process__img-wrapper {
+    margin-bottom: 15px;
+  }
 }
