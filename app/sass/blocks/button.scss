@@ -32,7 +32,7 @@
 
   &:hover,
   &:focus {
-    background: #ff3306;
+    box-shadow: 0 8px 10px 0 rgba(255, 72, 32, 0.19);
   }
 
 }
@@ -42,7 +42,7 @@
 
   &:hover,
   &:focus {
-    background: #0a1e52;
+    box-shadow: 0 8px 10px 0 rgba(0, 40, 140, 0.19);
   }
 }
 
@@ -51,8 +51,12 @@
 
   &:hover,
   &:focus {
-    background: #0e450e;
+    box-shadow: 0 8px 10px 0 rgba(0, 154, 0, 0.19);
   }
+}
+
+.button--grey:hover {
+  background-color: #6a6767;
 }
 
 

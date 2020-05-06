@@ -21,3 +21,38 @@
   padding: 35px 0 30px;
 }
 
+.tariffs__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 100px;
+}
+
+.tariffs__item {
+  display: flex;
+  flex-direction: column;
+
+  width: 33.333%;
+  padding: 50px 10px;
+
+  border: 1px solid #e8e8e8;
+  background-color: #ffffff;
+}
+
+.tariffs__list.horizontally {
+  flex-direction: column;
+
+  .tariffs__item {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    padding: 50px;
+  }
+
+}
+
+
+
+

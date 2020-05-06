@@ -1,0 +1,43 @@
+.price__wrapper {
+  width: 100%;
+  max-width: 200px;
+  margin: auto auto 0;
+}
+
+.price {
+  text-align: center;
+}
+
+.price__text {
+  padding-bottom: 10px;
+  font-size: 13px;
+  font-weight: 300;
+}
+
+.price__value {
+  padding-bottom: 15px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.price__buttons {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.price__button {
+  margin-top: 15px;
+  line-height: 3;
+}
+
+
+/*---------------------------------------------------*/
+.horizontally {
+  .price__wrapper {
+    width: 100%;
+    max-width: 180px;
+    margin: 0;
+  }
+
+}
