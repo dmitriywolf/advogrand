@@ -35,3 +35,52 @@
   border: 2px solid #e50000;
   border-radius: 4px;
 }
+
+@media (max-width: 768px) {
+  .tariffs-menu__text {
+    font-size: 15px;
+    line-height: 2.13;
+  }
+
+  .tariffs-menu__link {
+    padding: 0 10px;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .tariffs-menu {
+    flex-wrap: wrap;
+  }
+
+  .tariffs-menu__text {
+    width: 100%;
+    text-align: center;
+  }
+
+  .tariffs-menu__links {
+    width: 100%;
+    max-width: 240px;
+    margin: 14px auto 0;
+  }
+
+  .tariffs-menu__link {
+    padding: 0 10px;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 2;
+  }
+}
+
+@media (max-width: 420px) {
+  .tariffs-menu__text {
+    line-height: 2;
+  }
+
+  .tariffs-menu__links {
+    margin: 12px auto 0;
+  }
+
+}

@@ -55,8 +55,12 @@
   }
 }
 
-.button--grey:hover {
-  background-color: #6a6767;
+.button--grey {
+  background-color: #9a9a9a;
+
+  &:hover {
+    box-shadow: 0 8px 10px 0 rgba(154, 154, 154, 0.19);
+  }
 }
 
 

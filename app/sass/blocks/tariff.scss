@@ -1,3 +1,14 @@
+.tariff {
+  display: flex;
+  flex-direction: column;
+
+  width: 33.333%;
+  padding: 50px 10px;
+
+  border: 1px solid #e8e8e8;
+  background-color: #ffffff;
+}
+
 .tariff__header {
   text-align: center;
 
@@ -46,8 +57,16 @@
   font-weight: 600;
 }
 
-/*----------------------------------------------*/
 .horizontally {
+  .tariff {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    padding: 50px;
+  }
+
   .tariff__header {
     text-align: left;
   }
@@ -72,11 +91,146 @@
 }
 
 
+@media (max-width: 900px) {
+  .tariff {
+    padding: 30px 10px;
+  }
+
+  .tariff__header {
+    img {
+      margin: 20px auto;
+    }
+  }
+
+  .tariff__title {
+    font-size: 18px;
+  }
+
+  .tariff__parameters {
+    margin-bottom: 25px;
+  }
+
+  .tariff__item {
+    padding: 10px;
+  }
+
+  .tariff__item--big {
+    height: auto;
+    font-size: 12px;
+  }
+
+  .tariff__value {
+    font-size: 11px;
+    font-weight: 600;
+    text-align: right;
+  }
+
+  .horizontally {
+    .tariff {
+      padding: 30px 25px;
+    }
+
+    .tariff__parameters {
+      max-width: 300px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .tariff {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 10px 15px;
+  }
+
+  .tariff__header {
+    img {
+      margin: 20px auto;
+    }
+  }
+
+  .tariff__title {
+    font-size: 18px;
+  }
+
+  .tariff__parameters {
+    margin-bottom: 25px;
+  }
+
+  .tariff__item {
+    padding: 10px;
+  }
+
+  .tariff__item--big {
+    height: auto;
+    font-size: 12px;
+  }
+
+  .tariff__value {
+    font-size: 11px;
+    font-weight: 600;
+    text-align: right;
+  }
+
+  .horizontally {
+    .tariff {
+      max-width: 100%;
+      padding: 25px 10px;
+      margin: 0;
+    }
+
+    .tariff__header {
+      width: 180px;
+    }
+
+    .tariff__parameters {
+      width: 260px;
+    }
+
+  }
+}
 
 
+@media (max-width: 600px) {
+  .horizontally {
+    .tariff {
+      flex-direction: column;
+      width: 100%;
+      max-width: 300px;
+      margin: 0 10px 15px;
+    }
 
+    .tariff__header {
+      text-align: center;
 
+      img {
+        margin: 20px auto;
+      }
+    }
 
+    .tariff__title {
+      font-size: 18px;
+    }
 
+    .tariff__parameters {
+      margin-bottom: 25px;
+    }
 
+    .tariff__item {
+      padding: 10px;
+    }
+
+    .tariff__item--big {
+      height: auto;
+      font-size: 12px;
+    }
+
+    .tariff__value {
+      font-size: 11px;
+      font-weight: 600;
+      text-align: right;
+    }
+
+  }
+}
 

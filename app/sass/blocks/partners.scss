@@ -1,3 +1,21 @@
+.partners__list-wrapper {
+  position: relative;
+}
+
+.partners__arrow {
+  position: absolute;
+  top: calc(50% - 7px);
+
+  &--prev {
+    left: -70px;
+  }
+
+  &--next {
+    right: -70px;
+  }
+}
+
+
 .partners__list {
   display: flex;
   justify-content: space-between;

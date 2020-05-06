@@ -1,0 +1,16 @@
+.slider__arrow {
+  fill: #d6d6d6;
+
+  transition: 0.5s linear;
+
+
+  &:hover {
+    fill: $hover-color;
+    cursor: pointer;
+  }
+
+  &--prev {
+    transform: rotate(180deg);
+  }
+
+}

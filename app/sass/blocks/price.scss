@@ -23,7 +23,6 @@
 .price__buttons {
   display: flex;
   flex-direction: column;
-
 }
 
 .price__button {
@@ -31,13 +30,37 @@
   line-height: 3;
 }
 
-
-/*---------------------------------------------------*/
 .horizontally {
   .price__wrapper {
     width: 100%;
     max-width: 180px;
     margin: 0;
+  }
+}
+
+
+@media (max-width: 900px) {
+  .price__text {
+    padding-bottom: 5px;
+    font-size: 12px;
+  }
+
+  .price__value {
+    padding-bottom: 10px;
+    font-size: 20px;
+  }
+
+  .price__button {
+    margin-top: 10px;
+    font-size: 17px;
+    line-height: 2.5;
+  }
+
+  .horizontally {
+    .price__wrapper {
+      width: 160px;
+    }
+
   }
 
 }
