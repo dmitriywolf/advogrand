@@ -20,3 +20,58 @@
   fill: #e42626;
   transition: 0.5s linear;
 }
+
+@media (max-width: 900px) {
+  .download__item {
+    width: 35px;
+    height: 35px;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .download__item {
+    margin-left: 5px;
+  }
+
+}
+
+@media (max-width: 600px) {
+  .download__item {
+    width: 30px;
+    height: 30px;
+  }
+
+  .download__icon {
+    &--android {
+      width: 17px;
+      height: 19px;
+    }
+
+    &--apple {
+      width: 14px;
+      height: 18px;
+    }
+  }
+
+}
+
+@media (max-width: 420px) {
+  .download__item {
+    width: 25px;
+    height: 25px;
+  }
+
+  .download__icon {
+    &--android {
+      width: 15px;
+      height: 17px;
+    }
+
+    &--apple {
+      width: 13px;
+      height: 16px;
+    }
+  }
+
+}

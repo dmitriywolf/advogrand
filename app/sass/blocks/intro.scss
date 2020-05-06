@@ -128,7 +128,7 @@
 @media (max-width: 420px) {
   .intro {
     background-position: 65% 30%;
-    height: 100vh;
+    height: calc(100vh - 94px);
 
     .container {
       height: 100%;

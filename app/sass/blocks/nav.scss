@@ -1,7 +1,3 @@
-.nav__burger {
-  display: none;
-}
-
 .nav {
   display: flex;
   justify-content: space-between;
@@ -25,5 +21,49 @@
 
   &:hover {
     color: $hover-color;
+
   }
+
+  &:active {
+    text-decoration: underline;
+  }
+}
+
+@media (max-width: 960px) {
+  .nav__list {
+
+    li {
+      margin: 0 25px 0 0;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .nav {
+    //display: flex;
+    //justify-content: space-between;
+  }
+
+  .nav__list {
+
+    display: none;
+    //justify-content: space-between;
+
+    li {
+      margin: 0 8px 0 0;
+    }
+  }
+
+  //.nav__link {
+  //  font-size: 14px;
+  //  font-weight: 300;
+  //  line-height: 2.14;
+  //  color: $text-color;
+  //  transition: 0.5s linear;
+  //
+  //  &:hover {
+  //    color: $hover-color;
+  //  }
+  //}
+
 }

@@ -52,3 +52,90 @@
     color: $hover-color;
   }
 }
+
+@media (max-width: 960px) {
+  .contact {
+    position: static;
+    width: 58%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 900px) {
+  .contact {
+    width: 50%;
+    padding: 75px 0;
+  }
+
+  .contact__title {
+    padding-bottom: 45px;
+    font-size: 28px;
+  }
+
+  .contact__item {
+    margin-bottom: 5px;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .contact {
+    padding: 50px 15px;
+  }
+
+  .contact__title {
+    font-size: 26px;
+  }
+
+  .contact__item {
+    margin-bottom: 10px;
+  }
+
+  .contact__value {
+    padding: 5px 0;
+    font-size: 16px;
+  }
+
+}
+
+@media (max-width: 600px) {
+  .contact {
+    width: 100%;
+    padding: 40px 15px;
+  }
+
+  .contact__title {
+    padding-bottom: 40px;
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .contact__item {
+    max-width: 400px;
+  }
+
+}
+
+@media (max-width: 420px) {
+  .contact {
+    padding: 35px 15px;
+  }
+
+  .contact__title {
+    padding-bottom: 30px;
+    font-size: 22px;
+  }
+
+  .contact__item {
+    margin-bottom: 8px;
+    text-align: center;
+  }
+
+  .contact__value {
+    font-size: 15px;
+  }
+
+}

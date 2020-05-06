@@ -14,3 +14,49 @@
   margin-right: 80px;
   padding-left: 10px;
 }
+
+@media (max-width: 960px) {
+  .consultation {
+    position: static;
+    width: 42%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .consultation__form {
+    margin: 0;
+    padding: 0;
+  }
+
+}
+
+@media (max-width: 900px) {
+  .consultation {
+    width: 50%;
+    padding: 75px 0;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .consultation {
+    padding: 50px 15px;
+  }
+
+}
+
+@media (max-width: 600px) {
+  .consultation {
+    width: 100%;
+    padding: 40px 15px;
+  }
+
+}
+
+@media (max-width: 420px) {
+  .consultation {
+    padding: 35px 15px;
+  }
+
+}
+

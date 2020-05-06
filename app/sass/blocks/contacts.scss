@@ -4,4 +4,35 @@
   background: $bg-color;
 }
 
+@media (max-width: 960px) {
+  .contacts {
+    background: #ffffff;
+
+    .container {
+      height: 100%;
+    }
+  }
+
+  .contacts__inner {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+}
+
+@media (max-width: 900px) {
+  .contacts {
+    height: auto;
+  }
+
+}
+
+@media (max-width: 600px) {
+  .contacts__inner {
+    flex-wrap: wrap;
+  }
+
+}
+
 
