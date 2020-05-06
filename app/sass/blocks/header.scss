@@ -61,6 +61,8 @@
 
 @media (max-width: 960px) {
   .header__top {
+    position: relative;
+
     .header__inner {
       justify-content: space-between;
     }
