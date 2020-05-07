@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Advogrand</title>
 
+    <!--Favicon-->
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
     <!--Style-->
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -31,6 +39,11 @@
         <symbol id="arrow" viewBox="0 0 612 430">
             <g>
                 <path d="M412.613,6.81a21.7,21.7,0,0,0-30.843,30.532L538.162,193.733H22.092A21.488,21.488,0,0,0,.5,215.345a21.723,21.723,0,0,0,21.592,21.9h516.07l-156.392,156.1c-8.337,8.629-8.337,22.524,0,30.843a21.609,21.609,0,0,0,30.843,0L606.028,230.775a21.241,21.241,0,0,0,0-30.532Z"/>
+            </g>
+        </symbol>
+        <symbol id="icon-close" viewBox="0 0 48 48">
+            <g>
+                <path d="M28.782,24.144,47.812,5.379a2.954,2.954,0,0,0,0-4.22,3.055,3.055,0,0,0-4.279,0L24.5,19.924,5.473,1.159a3.055,3.055,0,0,0-4.279,0,2.954,2.954,0,0,0,0,4.22l19.03,18.765L1.194,42.91a2.954,2.954,0,0,0,0,4.22,3.055,3.055,0,0,0,4.279,0L24.5,28.364,43.532,47.129a3.055,3.055,0,0,0,4.279,0,2.954,2.954,0,0,0,0-4.22Z"/>
             </g>
         </symbol>
 
@@ -762,6 +775,79 @@
         </div> <!--/.footer__inner-->
     </div> <!--/.container-->
 </footer> <!--/.footer-->
+
+<!--Modal Window-->
+<!--Popup Consultation-->
+<div class="popup popup--consultation">
+    <button class="popup__close">
+        <svg class="popup__close-icon" width="14" height="14">
+            <use xlink:href="#icon-close"></use>
+        </svg>
+    </button> <!--/.popup__close-->
+    <form class="popup__form form" action="#">
+        <h3 class="form__title">Оставьте свой номер и мы свяжемся с вами</h3>
+        <div class="form__input-wrapper">
+            <label class="form__label" for="nameCon">Введите своё имя</label>
+            <input class="form__input" id="nameCon" type="text">
+        </div> <!--/.form__input-wrapper-->
+        <div class="form__input-wrapper">
+            <label class="form__label" for="phoneCon">Ваш номер телефона</label>
+            <input class="form__input" id="phoneCon" type="tel">
+        </div> <!--/.form__input-wrapper-->
+        <button class="form__button button button--red" type="submit">Заказать звонок консультанта
+        </button>
+        <p class="form__text">Перезвоним вам в течении 5 минут</p>
+    </form> <!--/.popup__form-->
+</div> <!--popup--consultation-->
+
+<!--Popup CallBack-->
+<div class="popup popup--callback">
+    <button class="popup__close">
+        <svg class="popup__close-icon" width="14" height="14">
+            <use xlink:href="#icon-close"></use>
+        </svg>
+    </button> <!--/.popup__close-->
+    <form class="popup__form form" action="#">
+        <h3 class="form__title">Напишите нам письмо или задайте свой вопрос</h3>
+        <div class="form__input-wrapper">
+            <label class="form__label" for="nameCall">Введите своё имя</label>
+            <input class="form__input" id="nameCall" type="text">
+        </div> <!--/.form__input-wrapper-->
+        <div class="form__input-wrapper">
+            <label class="form__label" for="phoneCall">Ваш номер телефона</label>
+            <input class="form__input" id="phoneCall" type="tel">
+        </div> <!--/.form__input-wrapper-->
+        <div class="form__input-wrapper">
+            <label class="form__label" for="textareaCall">Сообщение или вопрос</label>
+            <textarea class="form__textarea" name="your-question" id="textareaCall"></textarea>
+        </div> <!--/.form__input-wrapper-->
+
+        <button class="form__button button button--red" type="submit">Заказать звонок консультанта
+        </button>
+        <p class="form__text">Перезвоним вам в течении 5 минут</p>
+    </form> <!--/.popup__form-->
+</div> <!--popup--consultation-->
+
+<!--Popup Feature-->
+<div class="popup popup--feature">
+    <button class="popup__close">
+        <svg class="popup__close-icon" width="14" height="14">
+            <use xlink:href="#icon-close"></use>
+        </svg>
+    </button> <!--/.popup__close-->
+    <div class="popup__feature">
+        <h3 class="popup__title">Бездействуют государственные органы?</h3>
+        <div class="popup__img-wrapper">
+            <img src="img/popup-img.jpg" alt="" width="320" height="140">
+        </div> <!--/.popup__img-wrapper-->
+        <div class="popup__text">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua.</p>
+            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat.</p>
+        </div> <!--/.popup__text-->
+    </div> <!--/.popup__feature-->
+</div> <!--/.popup--feature-->
 
 </body>
 </html>
