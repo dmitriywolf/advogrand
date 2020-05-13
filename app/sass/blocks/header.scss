@@ -59,6 +59,14 @@
   }
 }
 
+.header__top.fixed {
+  position: fixed;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 2px 3px 2px rgba(0, 0, 0, 0.3);
+  z-index: 100;
+}
+
 @media (max-width: 960px) {
   .header__top {
     position: relative;
