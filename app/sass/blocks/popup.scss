@@ -1,35 +1,23 @@
 .popup {
-  display: none;
   position: fixed;
+
   top: 0;
   left: 0;
   bottom: 0;
-
   width: 100%;
+  display: none;
   z-index: 101;
-
-
-
 
   .popup__inner {
     position: fixed;
-
     top: 20%;
     left: calc(50% - 235px);
-
     max-width: 470px;
     padding: 30px 75px;
-
     background-color: #ffffff;
     border: 1px solid #dddddd;
     border-radius: 4px;
-z-index: 101;
-
   }
-
-
-
-
 
   .popup__close {
     position: absolute;
@@ -46,7 +34,6 @@ z-index: 101;
     }
   }
 }
-
 
 .popup.show {
   display: block;
@@ -68,10 +55,13 @@ z-index: 101;
 
 @media (max-width: 1024px) {
   .popup {
-    left: calc(50% - 210px);
 
-    max-width: 420px;
-    padding: 30px 50px;
+    .popup__inner {
+      left: calc(50% - 210px);
+
+      max-width: 420px;
+      padding: 30px 50px;
+    }
 
     .popup__close {
       top: 20px;
@@ -103,12 +93,14 @@ z-index: 101;
 
 }
 
-
 @media (max-width: 768px) {
   .popup {
-    left: calc(50% - 180px);
-    max-width: 360px;
-    padding: 30px 40px;
+
+    .popup__inner {
+      left: calc(50% - 180px);
+      max-width: 360px;
+      padding: 30px 40px;
+    }
 
     .form__input-wrapper {
       margin-bottom: 10px;
@@ -146,9 +138,12 @@ z-index: 101;
 
 @media (max-width: 600px) {
   .popup {
-    left: calc(50% - 165px);
-    max-width: 330px;
-    padding: 25px 35px;
+
+    .popup__inner {
+      left: calc(50% - 165px);
+      max-width: 330px;
+      padding: 25px 35px;
+    }
 
     .form__input-wrapper {
       margin-bottom: 5px;
@@ -182,9 +177,12 @@ z-index: 101;
 
 @media (max-width: 420px) {
   .popup {
-    left: calc(50% - 150px);
-    max-width: 300px;
-    padding: 20px;
+
+    .popup__inner {
+      left: calc(50% - 150px);
+      max-width: 300px;
+      padding: 20px;
+    }
 
     .popup__close {
       top: 15px;

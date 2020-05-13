@@ -43,9 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                     modal.classList.add('show', 'animated', 'bounceIn');
                     document.body.classList.add('show-popup');
-
                 });
-
             });
 
             close.addEventListener('click', () => {
@@ -59,7 +57,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     document.body.classList.remove('show-popup');
                 }
             })
-
         }
 
         function showModalBuTime(selector, time) {
