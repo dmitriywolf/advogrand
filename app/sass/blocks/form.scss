@@ -40,6 +40,9 @@
 
 .form__textarea {
   height: 80px;
+  padding: 5px;
+  line-height: 1.2;
+  overflow: hidden;
 }
 
 .form__button {
@@ -61,8 +64,7 @@
     font-size: 17px;
   }
 
-  .form__input,
-  .form__textarea {
+  .form__input {
     line-height: 3;
   }
 
