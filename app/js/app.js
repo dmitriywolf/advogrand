@@ -136,7 +136,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     modals();
 
-    /*Smooth Scroll*/ 
+    /*Smooth Scroll*/
     const scrolling = () => {
         /*PageUp*/
         let upElement = document.querySelector('.pageup');
@@ -157,12 +157,12 @@ document.addEventListener('DOMContentLoaded', () => {
             body = document.body;
 
         //Якоря
-        let elementScroll = document.querySelectorAll('[href^="#"]');
+        let anchors = document.querySelectorAll('[href^="#"]');
 
         //Подсчет расстояния скролинга
         const calcScroll = () => {
 
-            elementScroll.forEach(item => {
+            anchors.forEach(item => {
                 item.addEventListener('click', function (event) {
 
                     console.log(item.hash);
@@ -228,6 +228,21 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     scrolling();
+
+
+    /*Tariffs*/
+    const tariffs = () => {
+
+        let tariffsContent = document.querySelector('.tariffs__list');
+        let tariffLinks = document.querySelectorAll('.tariffs-menu__link');
+
+        tariffLinks.forEach(item => {
+
+        })
+
+    };
+
+    tariffs();
 
 
 });
