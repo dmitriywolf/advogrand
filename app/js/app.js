@@ -28,7 +28,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     /*Modals*/
     const modals = () => {
-        function bindModal(triggerSelector, modalSelector, closeSelector, closeClickOverlay = true) {
+
+        let btnPress = false;
+
+        function bindModal(triggerSelector, modalSelector, closeSelector) {
 
             const trigger = document.querySelectorAll(triggerSelector),
                 modal = document.querySelector(modalSelector),
@@ -42,6 +45,8 @@ document.addEventListener('DOMContentLoaded', () => {
                         e.preventDefault();
                     }
 
+                    btnPress = true;
+
                     //Скрываем все открытые окна если такие есть
                     windows.forEach(item => {
                         item.classList.remove('show');
@@ -54,11 +59,6 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             close.addEventListener('click', () => {
-                //Скрываем все открытые окна если такие есть
-                windows.forEach(item => {
-                    item.classList.remove('show');
-                });
-
                 modal.classList.remove('show');
                 document.body.style.overflow = '';
                 document.body.style.marginRight = '0px';
@@ -66,31 +66,37 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             modal.addEventListener('click', (e) => {
-                if (e.target === modal && closeClickOverlay) {
+                if (e.target === modal) {
                     windows.forEach(item => {
                         item.classList.remove('show');
                     });
 
+                    modal.classList.remove('show');
                     document.body.style.overflow = '';
                     document.body.style.marginRight = '0px';
                 }
             });
         }
 
-        //
-        // function showModalBuTime(selector, time) {
-        //     setTimeout(function () {
-        //         document.querySelector(selector).classList.add('show', 'animated', 'bounceIn');
-        //         document.body.classList.add('show-popup');
-        //         document.querySelector(selector).addEventListener('click', (e) => {
-        //             let elem = e.target;
-        //             if (elem === document.querySelector(selector) || elem.closest('.popup__close')) {
-        //                 document.querySelector(selector).classList.remove('show');
-        //                 document.body.classList.remove('show-popup');
-        //             }
-        //         })
-        //     }, time);
-        // }
+        function showModalByTime(selector, time) {
+            setTimeout(function () {
+
+                let display;
+
+                document.querySelectorAll('.popup').forEach(item => {
+                    if (getComputedStyle(item).display !== 'none') {
+                        display = 'block';
+                    }
+                });
+
+                if (!display) {
+                    document.querySelector(selector).classList.add('show');
+                    document.body.style.overflow = 'hidden';
+                    let scroll = calcScroll();
+                    document.body.style.marginRight = `${scroll}px`;
+                }
+            }, time);
+        }
 
         //Получаем ширину скролла
         function calcScroll() {
@@ -108,18 +114,33 @@ document.addEventListener('DOMContentLoaded', () => {
             return scrollWidth;
         }
 
+        //Показывать окно когда пользователь пролистает до конца не нажмет ни одну кнопку
+        function openByScroll(selector) {
+            window.addEventListener('scroll', () => {
+                let scrollHeight = Math.max(document.documentElement.scrollHeight, document.body.scrollHeight);
+
+                if (!btnPress && (window.pageYOffset + document.documentElement.clientHeight >= scrollHeight)) {
+                    document.querySelector(selector).click();
+                }
+            });
+        }
 
         bindModal('.button--callback', '.popup--callback', '.popup--callback .popup__close');
         bindModal('.button--consultation', '.popup--consultation', '.popup--consultation .popup__close');
+        bindModal('.button--feature', '.popup--feature', '.popup--feature .popup__close');
 
-        // showModalBuTime('.popup--feature', 10000);
+        showModalByTime('.popup--callback', 60000);
+
+        openByScroll('.button--feature');
     };
 
     modals();
 
+    /*Smooth Scroll*/
 
-    /*Filter
-    * =====================================*/
+    
+
+
 
 
 });
