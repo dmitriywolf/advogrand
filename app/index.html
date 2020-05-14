@@ -84,7 +84,7 @@
     </svg>
 </div>
 
-<header class="header">
+<header class="header" id="up">
     <div class="header__top">
         <div class="container">
             <div class="header__inner">
@@ -96,12 +96,12 @@
                     </button> <!--/.burger-->
 
                     <ul class="nav__list">
-                        <li><a class="nav__link" href="">Как мы работаем</a></li>
-                        <li><a class="nav__link" href="">Преимущества</a></li>
-                        <li><a class="nav__link" href="">Отзывы</a></li>
-                        <li><a class="nav__link" href="">Тарифы</a></li>
-                        <li><a class="nav__link" href="">Партнеры</a></li>
-                        <li><a class="nav__link" href="">Контакты</a></li>
+                        <li><a class="nav__link" href="#process">Как мы работаем</a></li>
+                        <li><a class="nav__link" href="#features">Преимущества</a></li>
+                        <li><a class="nav__link" href="#reviews">Отзывы</a></li>
+                        <li><a class="nav__link" href="#tariffs">Тарифы</a></li>
+                        <li><a class="nav__link" href="#partners">Партнеры</a></li>
+                        <li><a class="nav__link" href="#contacts">Контакты</a></li>
                     </ul> <!--/.nav__list-->
                 </nav> <!--nav-->
 
@@ -259,7 +259,7 @@
     </section> <!--/.about-->
 
     <!--Process-->
-    <section class=" section process">
+    <section class="section process" id="process">
         <div class="container">
             <div class="process__inner">
                 <h2 class="section__title">Как оказывается услуга</h2>
@@ -288,7 +288,7 @@
     </section> <!--/.process-->
 
     <!--Features-->
-    <section class="section features">
+    <section class="section features" id="features">
         <div class="container">
             <h2 class="section__title">Преимущество сервиса Advogrand по сравнению с другими юридическими
                 компаниями</h2>
@@ -384,7 +384,7 @@
     </section> <!--/.app-->
 
     <!--Reviews-->
-    <section class="section reviews">
+    <section class="section reviews" id="reviews">
         <div class="container">
             <div class="reviews__inner">
                 <h2 class="section__title">Отзывы</h2>
@@ -494,7 +494,7 @@
     </section> <!--/.reviews-->
 
     <!--Partners-->
-    <section class="section partners">
+    <section class="section partners" id="partners">
         <div class="container">
             <div class="partners__inner">
                 <h2 class="section__title">Партнеры Advogrand</h2>
@@ -564,7 +564,7 @@
     </section> <!--/.partners-->
 
     <!--Tariffs-->
-    <section class="section tariffs">
+    <section class="section tariffs" id="tariffs">
         <div class="container">
             <div class="tariffs__inner">
                 <h2 class="section__title">Выберите тариф</h2>
@@ -617,7 +617,8 @@
                                 <p class="price__value">65 $ за год</p>
                             </div>
                             <div class="price__buttons">
-                                <button class="price__button button button--orange">Консультация</button>
+                                <button class="price__button button button--consultation button--orange ">Консультация
+                                </button>
                                 <button class="price__button button button--grey">Купить</button>
                             </div>
                         </div> <!--/.price__wrapper-->
@@ -662,7 +663,8 @@
                                 <p class="price__value">130 $ за год</p>
                             </div>
                             <div class="price__buttons">
-                                <button class="price__button button button--green">Консультация</button>
+                                <button class="price__button button button--consultation button--green">Консультация
+                                </button>
                                 <button class="price__button button button--grey">Купить</button>
                             </div>
                         </div> <!--/.price__wrapper-->
@@ -713,7 +715,8 @@
                                 <p class="price__value">265 $ за год</p>
                             </div>
                             <div class="price__buttons">
-                                <button class="price__button button button--blue">Консультация</button>
+                                <button class="price__button button button--consultation button--blue">Консультация
+                                </button>
                                 <button class="price__button button button--grey">Купить</button>
                             </div>
                         </div> <!--/.price__wrapper-->
@@ -727,7 +730,7 @@
     </section> <!--/.tariffs-->
 
     <!--Contacts-->
-    <section class="contacts">
+    <section class="contacts" id="contacts">
         <div class="container">
             <div class="contacts__inner">
                 <div class="consultation">
@@ -871,7 +874,7 @@
 </div> <!--/.popup--feature-->
 
 <!--PageUp-->
-<a class="pageup" href="#">
+<a class="pageup animated" href="#up">
     <svg class="pageup__icon" width="24" height="24">
         <use xlink:href="#icon-pageup"></use>
     </svg>
