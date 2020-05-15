@@ -737,16 +737,16 @@
                     <form class="consultation__form form" action="#">
                         <h3 class="form__title">Напишите нам письмо или задайте свой вопрос</h3>
                         <div class="form__input-wrapper">
-                            <label class="form__label" for="name">Введите своё имя</label>
-                            <input class="form__input" id="name" type="text">
+                            <label class="form__label" for="userName">Введите своё имя</label>
+                            <input class="form__input" name="user-name" id="userName" type="text" required>
                         </div> <!--/.form__input-wrapper-->
                         <div class="form__input-wrapper">
-                            <label class="form__label" for="phone">Ваш номер телефона</label>
-                            <input class="form__input" id="phone" type="tel">
+                            <label class="form__label" for="userPhone">Ваш номер телефона</label>
+                            <input class="form__input" name="user-phone" id="userPhone" type="tel" required>
                         </div> <!--/.form__input-wrapper-->
                         <div class="form__input-wrapper">
-                            <label class="form__label" for="textarea">Сообщение или вопрос</label>
-                            <textarea class="form__textarea" name="your-question" id="textarea"></textarea>
+                            <label class="form__label" for="userQuestion">Сообщение или вопрос</label>
+                            <textarea class="form__textarea" name="user-question" id="userQuestion"></textarea>
                         </div> <!--/.form__input-wrapper-->
                         <button class="form__button button button--red" type="submit">Заказать звонок консультанта
                         </button>
@@ -804,12 +804,12 @@
         <form class="popup__form form" action="#">
             <h3 class="form__title">Оставьте свой номер и мы свяжемся с вами</h3>
             <div class="form__input-wrapper">
-                <label class="form__label" for="nameCon">Введите своё имя</label>
-                <input class="form__input" id="nameCon" type="text">
+                <label class="form__label" for="userName-2">Введите своё имя</label>
+                <input class="form__input" name="user-name" id="userName-2" type="text" required>
             </div> <!--/.form__input-wrapper-->
             <div class="form__input-wrapper">
-                <label class="form__label" for="phoneCon">Ваш номер телефона</label>
-                <input class="form__input" id="phoneCon" type="tel">
+                <label class="form__label" for="userPhone-2">Ваш номер телефона</label>
+                <input class="form__input" name="user-phone" id="userPhone-2" type="tel" required>
             </div> <!--/.form__input-wrapper-->
             <button class="form__button button button--red" type="submit">Заказать звонок консультанта
             </button>
@@ -829,16 +829,16 @@
         <form class="popup__form form" action="#">
             <h3 class="form__title">Напишите нам письмо или задайте свой вопрос</h3>
             <div class="form__input-wrapper">
-                <label class="form__label" for="nameCall">Введите своё имя</label>
-                <input class="form__input" id="nameCall" type="text">
+                <label class="form__label" for="userName-1">Введите своё имя</label>
+                <input class="form__input" name="user-name" id="userName-1" type="text" required>
             </div> <!--/.form__input-wrapper-->
             <div class="form__input-wrapper">
-                <label class="form__label" for="phoneCall">Ваш номер телефона</label>
-                <input class="form__input" id="phoneCall" type="tel">
+                <label class="form__label" for="userPhone-1">Ваш номер телефона</label>
+                <input class="form__input" name="user-phone" id="userPhone-1" type="tel" required>
             </div> <!--/.form__input-wrapper-->
             <div class="form__input-wrapper">
-                <label class="form__label" for="textareaCall">Сообщение или вопрос</label>
-                <textarea class="form__textarea" name="your-question" id="textareaCall"></textarea>
+                <label class="form__label" for="userQuestion-1">Сообщение или вопрос</label>
+                <textarea class="form__textarea" name="user-question" id="userQuestion-1"></textarea>
             </div> <!--/.form__input-wrapper-->
 
             <button class="form__button button button--red" type="submit">Заказать звонок консультанта
@@ -879,7 +879,6 @@
         <use xlink:href="#icon-pageup"></use>
     </svg>
 </a> <!--/.pageup-->
-
 
 <!--JavaScript-->
 <script src="js/app.js"></script>
