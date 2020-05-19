@@ -15,6 +15,9 @@
   color: #313131;
   transition: 0.5s;
 
+  border: 2px solid transparent;
+  border-radius: 4px;
+
   &:hover {
     cursor: pointer;
     color: #e50000;
@@ -23,8 +26,7 @@
 
 .reviews-menu__item.is-active {
   color: #e50000;
-  border: 2px solid #e50000;
-  border-radius: 4px;
+  border-color: #e50000;
 }
 
 @media (max-width: 900px) {
