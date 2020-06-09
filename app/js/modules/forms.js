@@ -1,78 +1,98 @@
-/*Forms*/
 const forms = () => {
 
-    //Все формы и поля
-    const form = document.querySelectorAll('form'),
-        inputs = document.querySelectorAll('input'),
-        textareas = document.querySelectorAll('textarea'),
-        phoneInput = document.querySelectorAll('input[name="user-phone"]');
+    let form = document.querySelectorAll('form');
+    let inputs = document.querySelectorAll('input');
+    let textFields = document.querySelectorAll('textarea');
+    let phoneFields = document.querySelectorAll('input[type="tel"]');
 
-    //Проверка ввода номера телефона: Убрать все не числовые значения
-    phoneInput.forEach(item => {
-        item.addEventListener('input', () => {
-            item.value = item.value.replace(/\D/, '');
+    //В полях номера телефона вводить только цифры
+    phoneFields.forEach(input => {
+        input.addEventListener('input', () => {
+            input.value = input.value.replace(/\D/, '');
         });
     });
 
-    //Объект сообщений
-    const message = {
-        loading: 'Загрузка...',
-        success: 'Спасибо! Мы свяжемся с вами в течении 5 минут!',
-        failure: 'Что-то пошло не так...'
+    //Ответы для пользователя
+    const answers = {
+        loadingMessage: 'Загрузка...',
+        successMessage: 'Спасибо! Мы ответим Вам в течении 10 минут',
+        failMessage: 'Извините! Что-то пошло не так...',
+        loadingImg: './img/loading.gif',
+        successImg: './img/success.png'
     };
 
     //Функция отправки запроса
     const postData = async (url, data) => {
-        document.querySelector('.status').textContent = message.loading;
-
-        let res = await fetch(url, {
+        let response = await fetch(url, {
             method: "POST",
             body: data
         });
-
-        return await res.text();
+        return await response.text();
     };
 
-    //Функция очистки полей
+    //Очистка полей формы после отправки
     const clearFields = () => {
-        inputs.forEach(item => {
-            item.value = "";
+        inputs.forEach(input => {
+            input.value = "";
         });
 
-        textareas.forEach(item => {
-            item.value = "";
+        textFields.forEach(field => {
+            field.value = "";
         });
     };
 
+    //Обрабочик на отправку формы Submit
     form.forEach(item => {
-        item.addEventListener('submit', (e) => {
-            e.preventDefault();
 
-            //Блок показа ответа
-            let statusMessage = document.createElement('div');
-            statusMessage.classList.add('status');
-            item.appendChild(statusMessage);
+        item.addEventListener('submit', (event) => {
 
-            //Собираем все данные с формы
-            let formData = new FormData(item);
+            //Отмена стандартного поведения браузера
+            event.preventDefault();
 
-            //Отправляем запрос на сервер
-            postData('server.php', formData)
-                .then(res => {
-                    console.log(res);
-                    statusMessage.textContent = message.success;
+            //Блок ответа для пользователя
+            let answerPopup = document.createElement('div');
+            answerPopup.classList.add('popup__answer', 'animated', 'flipInX');
+            document.body.append(answerPopup);
+
+            let answerImg = document.createElement('img');
+            answerImg.setAttribute('src', answers.loadingImg);
+            answerPopup.append(answerImg);
+
+            let answerText = document.createElement('p');
+            answerText.textContent = answers.loadingMessage;
+            answerPopup.append(answerText);
+
+            let divFail = document.createElement('div');
+            divFail.classList.add('img__failed');
+
+            //Собрание всех данных которые ввел пользователь
+            const formData = new FormData(item);
+
+            //Осуществляем post запрос
+            postData('./server.php', formData)
+            //Успешное выполнение
+                .then(response => {
+                    console.log(response);
+                    answerImg.setAttribute('src', answers.successImg);
+                    answerText.textContent = answers.successMessage;
                 })
-                .catch(() => statusMessage.textContent = message.failure)
+                //Обработка ошибки
+                .catch(() => {
+                    answerImg.remove();
+                    answerPopup.prepend(divFail);
+                    answerText.textContent = answers.failMessage;
+                })
                 .finally(() => {
                     clearFields();
                     setTimeout(() => {
-                        statusMessage.remove();
-                    }, 5000);
-                });
-
+                        answerPopup.classList.remove('flipInX');
+                        answerPopup.classList.add('flipOutX');
+                        // answerPopup.remove();
+                    }, 4000);
+                })
         });
-    });
 
+    });
 
 };
 
