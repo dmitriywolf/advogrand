@@ -1,5 +1,5 @@
 const carousel = () => {
-    const config = {
+    const configPartners = {
         type: 'carousel',
         startAt: 0,
         perView: 4,
@@ -15,9 +15,7 @@ const carousel = () => {
             },
         }
     };
-    new Glide('.glide', config).mount();
-
-
+    new Glide('.glide--partners', configPartners).mount();
 };
 
 export {carousel};

@@ -101,7 +101,7 @@ const modals = () => {
     bindModal('.button--consultation', '.popup--consultation', '.popup--consultation .popup__close');
     bindModal('.button--feature', '.popup--feature', '.popup--feature .popup__close');
 
-    showModalByTime('.popup--callback', 60000);
+    //showModalByTime('.popup--callback', 60000);
 
     openByScroll('.button--feature');
 };

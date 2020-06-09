@@ -396,12 +396,8 @@
                     <li class="reviews-menu__item property">Недвижимость</li>
                     <li class="reviews-menu__item all is-active">Все</li>
                 </ul><!--/.reviews-menu-->
+
                 <div class="reviews__list-wrapper">
-                    <div class="reviews__arrow reviews__arrow--prev">
-                        <svg class="slider__arrow slider__arrow--prev" width="20" height="14">
-                            <use xlink:href="#arrow"></use>
-                        </svg>
-                    </div> <!--/.reviews__arrow-->
 
                     <ul class="reviews__list">
 
@@ -485,12 +481,23 @@
                             <p class="reviews__title">Длинное название видеоролика в две строки просто длинное</p>
                         </li> <!--/.reviews__item-->
                     </ul> <!--/.reviews__list-->
-                    <div class="reviews__arrow reviews__arrow--next">
-                        <svg class="slider__arrow slider__arrow--next" width="20" height="14">
-                            <use xlink:href="#arrow"></use>
-                        </svg>
-                    </div> <!--/.reviews__arrow-->
+
+                    <div class="glide__arrows reviews__arrows" data-glide-el="controls">
+                        <div class="reviews__arrow reviews__arrow--prev" data-glide-dir=">">
+                            <svg class="slider__arrow slider__arrow--prev" width="20" height="14">
+                                <use xlink:href="#arrow"></use>
+                            </svg>
+                        </div>
+                        <div class="reviews__arrow reviews__arrow--next" data-glide-dir="<">
+                            <svg class="slider__arrow slider__arrow-next" width="20" height="14">
+                                <use xlink:href="#arrow"></use>
+                            </svg>
+                        </div>
+                    </div> <!--/.glide__arrows /.reviews__arrows-->
+
+
                 </div> <!--/.reviews__list-wrapper-->
+
             </div> <!--/.reviews__inner-->
         </div> <!--/.container-->
     </section> <!--/.reviews-->
@@ -500,135 +507,132 @@
         <div class="container">
             <div class="partners__inner">
                 <h2 class="section__title">Партнеры Advogrand</h2>
+                <div class="glide glide--partners">
+                    <div class="glide__track" data-glide-el="track">
 
+                        <ul class="glide__slides">
 
-                    <div class="glide">
+                            <li class="glide__slide">
 
-                        <div class="glide__track" data-glide-el="track">
-
-                            <ul class="glide__slides">
-
-                                <li class="glide__slide">
-
-                                    <div class="partners__item">
-                                        <div class="partners__img-wrapper">
-                                            <img src="img/partners/item-1.png" alt="Глобекс Банк" width="220"
-                                                 height="140">
-                                        </div>
-
-                                        <div class="partners__text">
-                                            <p>
-                                                «Глобэкс» — российский коммерческий банк. Основан в 1992 году. В 2012 году
-                                                банк «Глобэкс» вошёл в ежегодный рейтинг надёжности Forbes. Банк попал в группу
-                                                «Высокая надёжность»
-                                            </p>
-                                        </div>
+                                <div class="partners__item">
+                                    <div class="partners__img-wrapper">
+                                        <img src="img/partners/item-1.png" alt="Глобекс Банк" width="220"
+                                             height="140">
                                     </div>
 
-                                </li> <!--/.glide__slide-->
-
-                                <li class="glide__slide">
-                                    <div class="partners__item">
-                                        <div class="partners__img-wrapper">
-                                            <img src="img/partners/item-2.png" alt="Спартак" width="220" height="140">
-                                        </div>
-                                        <div class="partners__text">
-                                            <p>
-                                                «Глобэкс» — российский коммерческий банк. Основан в 1992 году. В 2012 году
-                                                банк «Глобэкс» вошёл в ежегодный рейтинг надёжности Forbes. Банк попал в группу
-                                                «Высокая надёжность»
-                                            </p>
-                                        </div>
+                                    <div class="partners__text">
+                                        <p>
+                                            «Глобэкс» — российский коммерческий банк. Основан в 1992 году. В 2012 году
+                                            банк «Глобэкс» вошёл в ежегодный рейтинг надёжности Forbes. Банк попал в
+                                            группу
+                                            «Высокая надёжность»
+                                        </p>
                                     </div>
-                                </li> <!--/.glide__slide-->
+                                </div>
 
-                                <li class="glide__slide">
-                                    <div class="partners__item">
-                                        <div class="partners__img-wrapper">
-                                            <img src="img/partners/item-3.png" alt="Бин Страхование" width="220"
-                                                 height="140">
-                                        </div>
-                                        <div class="partners__text">
-                                            <p>
-                                                «Глобэкс» — российский коммерческий банк. Основан в 1992 году. В 2012 году
-                                                банк «Глобэкс» вошёл в ежегодный рейтинг надёжности Forbes. Банк попал в группу
-                                                «Высокая надёжность»
-                                            </p>
-                                        </div>
+                            </li> <!--/.glide__slide-->
+
+                            <li class="glide__slide">
+                                <div class="partners__item">
+                                    <div class="partners__img-wrapper">
+                                        <img src="img/partners/item-2.png" alt="Спартак" width="220" height="140">
+                                    </div>
+                                    <div class="partners__text">
+                                        <p>
+                                            «Глобэкс» — российский коммерческий банк. Основан в 1992 году. В 2012 году
+                                            банк «Глобэкс» вошёл в ежегодный рейтинг надёжности Forbes. Банк попал в
+                                            группу
+                                            «Высокая надёжность»
+                                        </p>
+                                    </div>
+                                </div>
+                            </li> <!--/.glide__slide-->
+
+                            <li class="glide__slide">
+                                <div class="partners__item">
+                                    <div class="partners__img-wrapper">
+                                        <img src="img/partners/item-3.png" alt="Бин Страхование" width="220"
+                                             height="140">
+                                    </div>
+                                    <div class="partners__text">
+                                        <p>
+                                            «Глобэкс» — российский коммерческий банк. Основан в 1992 году. В 2012 году
+                                            банк «Глобэкс» вошёл в ежегодный рейтинг надёжности Forbes. Банк попал в
+                                            группу
+                                            «Высокая надёжность»
+                                        </p>
+                                    </div>
+                                </div>
+
+                            </li> <!--/.glide__slide-->
+
+                            <li class="glide__slide ">
+                                <div class="partners__item">
+                                    <div class="partners__img-wrapper">
+                                        <img src="img/partners/item-4.png" alt="Фонарев" width="220" height="140">
+                                    </div>
+                                    <div class="partners__text">
+                                        <p>
+                                            «Глобэкс» — российский коммерческий банк. Основан в 1992 году. В 2012 году
+                                            банк «Глобэкс» вошёл в ежегодный рейтинг надёжности Forbes. Банк попал в
+                                            группу
+                                            «Высокая надёжность»
+                                        </p>
+                                    </div>
+                                </div>
+
+                            </li> <!--/.glide__slide-->
+
+                            <li class="glide__slide ">
+                                <div class="partners__item">
+                                    <div class="partners__img-wrapper">
+                                        <img src="img/partners/item-2.png" alt="Бин Страхование" width="220"
+                                             height="140">
                                     </div>
 
-                                </li> <!--/.glide__slide-->
-
-                                <li class="glide__slide ">
-                                    <div class="partners__item">
-                                        <div class="partners__img-wrapper">
-                                            <img src="img/partners/item-4.png" alt="Фонарев" width="220" height="140">
-                                        </div>
-                                        <div class="partners__text">
-                                            <p>
-                                                «Глобэкс» — российский коммерческий банк. Основан в 1992 году. В 2012 году
-                                                банк «Глобэкс» вошёл в ежегодный рейтинг надёжности Forbes. Банк попал в группу
-                                                «Высокая надёжность»
-                                            </p>
-                                        </div>
+                                    <div class="partners__text">
+                                        <p>
+                                            «Глобэкс» — российский коммерческий банк. Основан в 1992 году. В 2012 году
+                                            банк «Глобэкс» вошёл в ежегодный рейтинг надёжности Forbes. Банк попал в
+                                            группу
+                                            «Высокая надёжность»
+                                        </p>
                                     </div>
+                                </div>
+                            </li> <!--/.glide__slide-->
 
-                                </li> <!--/.glide__slide-->
-
-                                <li class="glide__slide ">
-                                    <div class="partners__item">
-                                        <div class="partners__img-wrapper">
-                                            <img src="img/partners/item-2.png" alt="Бин Страхование" width="220"
-                                                 height="140">
-                                        </div>
-
-                                        <div class="partners__text">
-                                            <p>
-                                                «Глобэкс» — российский коммерческий банк. Основан в 1992 году. В 2012 году
-                                                банк «Глобэкс» вошёл в ежегодный рейтинг надёжности Forbes. Банк попал в группу
-                                                «Высокая надёжность»
-                                            </p>
-                                        </div>
+                            <li class="glide__slide ">
+                                <div class="partners__item">
+                                    <div class="partners__img-wrapper">
+                                        <img src="img/partners/item-3.png" alt="Фонарев" width="220" height="140">
                                     </div>
-                                </li> <!--/.glide__slide-->
-
-                                <li class="glide__slide ">
-                                    <div class="partners__item">
-                                        <div class="partners__img-wrapper">
-                                            <img src="img/partners/item-3.png" alt="Фонарев" width="220" height="140">
-                                        </div>
-                                        <div class="partners__text">
-                                            <p>
-                                                «Глобэкс» — российский коммерческий банк. Основан в 1992 году. В 2012 году
-                                                банк «Глобэкс» вошёл в ежегодный рейтинг надёжности Forbes. Банк попал в группу
-                                                «Высокая надёжность»
-                                            </p>
-                                        </div>
+                                    <div class="partners__text">
+                                        <p>
+                                            «Глобэкс» — российский коммерческий банк. Основан в 1992 году. В 2012 году
+                                            банк «Глобэкс» вошёл в ежегодный рейтинг надёжности Forbes. Банк попал в
+                                            группу
+                                            «Высокая надёжность»
+                                        </p>
                                     </div>
-                                </li> <!--/.glide__slide-->
+                                </div>
+                            </li> <!--/.glide__slide-->
 
-                            </ul> <!--/.glide__slides-->
+                        </ul> <!--/.glide__slides-->
 
-                        </div> <!--/.glide__track-->
-
-                        <div class="glide__arrows partners__arrows" data-glide-el="controls">
-                            <div class="partners__arrow partners__arrow--prev" data-glide-dir=">">
-                                <svg class="slider__arrow slider__arrow--prev" width="20" height="14">
-                                    <use xlink:href="#arrow"></use>
-                                </svg>
-                            </div>
-                            <div class="partners__arrow partners__arrow--next" data-glide-dir="<">
-                                <svg class="slider__arrow slider__arrow-next" width="20" height="14">
-                                    <use xlink:href="#arrow"></use>
-                                </svg>
-                            </div>
-                        </div> <!--/.glide__arrows /.partners__arrows-->
-
-                    </div> <!--/.glide-->
-
-
-
-
+                    </div> <!--/.glide__track-->
+                    <div class="glide__arrows partners__arrows" data-glide-el="controls">
+                        <div class="partners__arrow partners__arrow--prev" data-glide-dir=">">
+                            <svg class="slider__arrow slider__arrow--prev" width="20" height="14">
+                                <use xlink:href="#arrow"></use>
+                            </svg>
+                        </div>
+                        <div class="partners__arrow partners__arrow--next" data-glide-dir="<">
+                            <svg class="slider__arrow slider__arrow-next" width="20" height="14">
+                                <use xlink:href="#arrow"></use>
+                            </svg>
+                        </div>
+                    </div> <!--/.glide__arrows /.partners__arrows-->
+                </div> <!--/.glide-->
             </div> <!--/.partners__inner-->
         </div> <!--/.container-->
     </section> <!--/.partners-->
