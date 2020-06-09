@@ -1,12 +1,12 @@
 @import "blocks/fonts";
 @import "blocks/variables";
+@import "blocks/animate";
 @import "blocks/button";
 @import "blocks/main";
 @import "blocks/container";
 @import "blocks/section";
 @import "blocks/slider";
 @import "blocks/pageup";
-@import "blocks/animate";
 
 
 /*Header*/
@@ -40,6 +40,7 @@
 @import "blocks/reviews-menu";
 
 /*Partners*/
+@import "blocks/glide";
 @import "blocks/partners";
 
 /*Tariffs*/

@@ -4,6 +4,8 @@ import {scrolling} from "./modules/scrolling.js";
 import {tariffs} from "./modules/tariffs.js";
 import {forms} from "./modules/forms.js";
 import {filter} from "./modules/filter.js";
+import {carousel} from "./modules/carousel.js";
+
 
 document.addEventListener('DOMContentLoaded', () => {
     "use strict";
@@ -14,5 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
     tariffs();
     forms();
     filter();
+    carousel();
 
 });

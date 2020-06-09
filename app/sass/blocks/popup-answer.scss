@@ -109,25 +109,27 @@
     left: calc(50% - 150px);
     max-width: 300px;
     padding: 10px 20px;
+
+    img {
+      width: 60px;
+      height: 60px;
+    }
+
+    .img__failed {
+      width: 60px;
+      height: 60px;
+    }
+
+    .img__failed::after {
+      bottom: 30px;
+      width: 60px;
+    }
+
+    .img__failed::before {
+      bottom: 30px;
+      width: 60px;
+    }
+
   }
 
-  img {
-    width: 60px;
-    height: 60px;
-  }
-
-  .img__failed {
-    width: 60px;
-    height: 60px;
-  }
-
-  .img__failed::after {
-    bottom: 30px;
-    width: 60px;
-  }
-
-  .img__failed::before {
-    bottom: 30px;
-    width: 60px;
-  }
 }

@@ -72,7 +72,7 @@ const forms = () => {
             postData('./server.php', formData)
             //Успешное выполнение
                 .then(response => {
-                    console.log(response);
+                    // console.log(response);
                     answerImg.setAttribute('src', answers.successImg);
                     answerText.textContent = answers.successMessage;
                 })
