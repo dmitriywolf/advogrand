@@ -1,2 +1,2 @@
 # Advogrand
-- Вёрстка Landing Page консалтинговой компании [Advogrand](https://dmitriywolf.github.io/works/advogrand/index.html)
+- Вёрстка Landing Page: [Advogrand](https://dmitriywolf.github.io/works/advogrand/index.html)
