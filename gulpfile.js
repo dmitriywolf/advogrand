@@ -15,40 +15,40 @@ let del = require('del');
 gulp.task('browser-sync', function () {
     browserSync.init({
         server: {
-            baseDir: "./app/"
+            baseDir: "./src/"
         }
     });
 });
 
 //Style SASS --> CSS
 gulp.task('style', function () {
-    return gulp.src('./app/sass/style.scss')
+    return gulp.src('./src/sass/style.scss')
         .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
         .pipe(autoprefixer({
             overrideBrowserslist: ['last 2 versions'],
             cascade: false
         }))
         // .pipe(rename({suffix: '.min'}))
-        .pipe(gulp.dest('./app/css'))
+        .pipe(gulp.dest('./src/css'))
         .pipe(browserSync.reload({stream: true}))
 });
 
 // Отслеживание HTML
 gulp.task('html', function () {
-    return gulp.src('app/*.html')
+    return gulp.src('src/*.html')
         .pipe(browserSync.reload({stream: true}))
 });
 
 // Отслеживание изменений в JS
 gulp.task('script', function () {
-    return gulp.src('app/js/*.js')
+    return gulp.src('src/js/*.js')
         .pipe(browserSync.reload({stream: true}))
 });
 
 gulp.task('watch', function () {
-    gulp.watch('app/sass/**/*.scss', gulp.parallel('style'));
-    gulp.watch('app/*.html', gulp.parallel('html'));
-    gulp.watch('app/js/*.js', gulp.parallel('script'));
+    gulp.watch('src/sass/**/*.scss', gulp.parallel('style'));
+    gulp.watch('src/*.html', gulp.parallel('html'));
+    gulp.watch('src/js/*.js', gulp.parallel('script'));
 });
 
 
