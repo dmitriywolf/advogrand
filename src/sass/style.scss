@@ -1,13 +1,26 @@
-@import "blocks/fonts";
-@import "blocks/variables";
-@import "blocks/animate";
-@import "blocks/button";
-@import "blocks/main";
-@import "blocks/container";
-@import "blocks/section";
+/*Libraries*/
+/*-----------------------------------------------------------------*/
+/*Glide Carousel*/
+@import "../../node_modules/@glidejs/glide/src/assets/sass/glide.core";
+
+
+/*Main Style*/
+/*-----------------------------------------------------------------*/
+
+/*Global*/
+@import "global/fonts";
+@import "global/variables";
+@import "global/animate";
+@import "global/button";
+@import "global/main";
+@import "global/container";
+@import "global/section";
+@import "global/form";
+
+
+/*Blocks*/
 @import "blocks/slider";
 @import "blocks/pageup";
-
 
 /*Header*/
 @import "blocks/header";
@@ -40,7 +53,6 @@
 @import "blocks/reviews-menu";
 
 /*Partners*/
-@import "blocks/glide";
 @import "blocks/partners";
 
 /*Tariffs*/
@@ -52,13 +64,12 @@
 /*Contacts*/
 @import "blocks/contacts";
 @import "blocks/consultation";
-@import "blocks/form";
 @import "blocks/contact";
 
 /*Footer*/
 @import "blocks/footer";
 
-/*popup*/
+/*Popup*/
 @import "blocks/popup";
 @import "blocks/popup-answer";
 
