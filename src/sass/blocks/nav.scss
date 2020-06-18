@@ -49,14 +49,26 @@
 
   .nav__list.show {
     position: absolute;
-    top: 100%;
+    top: calc(100% + 1px);
     left: 0;
 
     display: flex;
     width: 100%;
     padding: 10px 20px;
-    background-color: rgba(255, 255, 255, 0.95);
-    border-top: 1px solid #313131;
+    background-color: rgba(255, 255, 255, 0.98);
+    //box-shadow: 0 2px 3px 2px rgba(0, 0, 0, 0.3);
+    //border-top: 1px solid #313131;
+    z-index: 1;
+
+    .nav__link {
+      font-size: 16px;
+      //font-weight: 300;
+      line-height: 2.4;
+      //color: $text-color;
+      //transition: 0.5s linear;
+
+
+    }
 
     li {
       margin: 0;
@@ -72,10 +84,11 @@
 @media (max-width: 600px) {
   .nav__list.show {
     flex-direction: column;
-    max-width: 200px;
+    max-width: 260px;
+    padding: 10px 20px;
 
     .nav__link {
-      font-size: 13px;
+      font-size: 15px;
       text-transform: uppercase;
     }
   }
