@@ -1,22 +1,23 @@
 "use strict";
-let gulp = require('gulp');
-let sass = require('gulp-sass');
+const gulp = require("gulp");
+let sass = require('gulp-sass'); //Компилятор SCSS --> CSS
 sass.compiler = require('node-sass');
 
-let autoPrefix = require('gulp-autoprefixer');
-let concat = require('gulp-concat');
+let cleanCSS = require('gulp-clean-css'); //Минификация CSS
+let rename = require('gulp-rename'); //Перетменовае файлов
+let del = require('del'); //Очистка
 
-let rename = require('gulp-rename');
-let cleanCSS = require('gulp-clean-css');
-let browserSync = require('browser-sync').create();
-let del = require('del');
+const webpack = require("webpack-stream"); //Сборка модулей
+let browserSync = require('browser-sync').create(); //Локальный сервер
 
 /*==================================================================================*/
+
+const dist = "./dist/";
 
 //Html
 function layoutHTML() {
     return (gulp.src('./src/*.html'))
-        .pipe(gulp.dest('./dist/'))
+        .pipe(gulp.dest(dist))
         .pipe(browserSync.reload({stream: true}))
 }
 
@@ -25,11 +26,6 @@ function style() {
     return gulp.src('./src/sass/style.scss')
     //Компиляция SCSS to CSS
         .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
-        //Растановка префиксов
-        .pipe(autoPrefix({
-            overrideBrowserslist: ['last 2 versions'],
-            cascade: false
-        }))
         //Минификация
         .pipe(cleanCSS({
             level: 2
@@ -37,22 +33,38 @@ function style() {
         //Переименование
         .pipe(rename({suffix: '.min'}))
         //Папка назначения
-        .pipe(gulp.dest('./dist/css'))
+        .pipe(gulp.dest(dist + 'css'))
         .pipe(browserSync.reload({stream: true}))
 }
 
-//Scripts
-//порядок подключения JS
-let jsFiles = [
-    './node_modules/@glidejs/glide/dist/glide.min.js',
-    './src/js/index.js'
-];
-
-function script() {
-    return gulp.src(jsFiles)
-    //Обьединение в один файл
-        .pipe(concat('index.js'))
-        .pipe(gulp.dest('./dist/js/'))
+//Script
+function buildJS() {
+    return gulp.src("./src/js/main.js")
+        .pipe(webpack({
+            mode: 'development',
+            output: {
+                filename: 'index.js'
+            },
+            module: {
+                rules: [
+                    {
+                        test: /\.m?js$/,
+                        exclude: /(node_modules|bower_components)/,
+                        use: {
+                            loader: 'babel-loader',
+                            options: {
+                                presets: [['@babel/preset-env', {
+                                    debug: true,
+                                    corejs: 3,
+                                    useBuiltIns: "usage"
+                                }]]
+                            }
+                        }
+                    }
+                ]
+            }
+        }))
+        .pipe(gulp.dest(dist + 'js'))
         .pipe(browserSync.reload({stream: true}))
 }
 
@@ -60,32 +72,30 @@ function script() {
 function watch() {
     browserSync.init({
         server: {
-            baseDir: "./dist/"
+            baseDir: dist
         }
     });
-
     gulp.watch('./src/*.html', layoutHTML);
     gulp.watch('./src/sass/**/*.scss', style);
-    gulp.watch('./src/js/*.js', script);
+    gulp.watch('./src/js/**/*.js', buildJS);
 }
 
 function copyImg() {
     return gulp.src("./src/img/**/*.*")
-        .pipe(gulp.dest('./dist/img/'))
+        .pipe(gulp.dest(dist + "img/"))
 }
 
 function copyFonts() {
     return gulp.src("./src/fonts/**/*.*")
-        .pipe(gulp.dest('./dist/fonts/'))
+        .pipe(gulp.dest(dist + "fonts/"))
 }
 
 function clean() {
-    return del(['./dist/*'])
+    return del([dist])
 }
 
 //Таск для удаления файлов в папке build и запуск style и script
-gulp.task('build', gulp.series(clean, gulp.parallel(layoutHTML, style, script, copyImg, copyFonts)));
+gulp.task('build', gulp.series(clean, gulp.parallel(layoutHTML, style, buildJS, copyImg, copyFonts)));
 
 //Таск запускает таск build и watch последовательно
 gulp.task('default', gulp.series('build', watch));
-
