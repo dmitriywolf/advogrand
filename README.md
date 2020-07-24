@@ -9,12 +9,9 @@
 ### 2. Gulp 4
 	Собран на Gulp 4.
 
-### 3. JS
-	"Чистый" JavaScript.
-
-### 4. Webpack
+### 3. Webpack
 	Модули собраны на Webpack + Babel
 
-### 5. Плагины:
+### 4. Плагины:
 	
 1. Слайдер-Карусель: [Glide.js](https://glidejs.com/).
