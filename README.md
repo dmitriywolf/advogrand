@@ -9,9 +9,9 @@
 ### 2. Gulp 4
 	Собран на Gulp 4.
 
-### 3. Webpack
-	Модули собраны на Webpack + Babel
+### 4. Webpack + Babel
+	Для сборки модулей использован webpack.
 
-### 4. Плагины:
+### 5. Плагины:
 	
-1. Слайдер-Карусель: [Glide.js](https://glidejs.com/).
+	1. Слайдер-Карусель: [Glide.js](https://glidejs.com/).
