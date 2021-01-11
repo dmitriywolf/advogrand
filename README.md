@@ -1,5 +1,5 @@
 # Advogrand
-- Вёрстка Landing Page: [Advogrand](https://dmitriywolf.github.io/works/advogrand/index.html)
+- Вёрстка Landing Page: [Advogrand](https://dmitriywolf.github.io/works/advogrand/)
 
 ## Описание
 
@@ -10,7 +10,7 @@
 	Собран на Gulp 4.
 
 ### 4. Webpack + Babel
-	Для сборки модулей использован webpack.
+	Для сборки модулей использован Webpack.
 
 ### 5. Плагины:
 	
