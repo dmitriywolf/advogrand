@@ -1,5 +1,5 @@
 # Advogrand
-- Вёрстка Landing Page: [Advogrand](https://dmitriywolf.github.io/works/advogrand/)
+- Вёрстка Landing Page: [Advogrand](https://dmitriywolf.github.io/advogrand/dist/index.html)
 
 ## Описание
 
