@@ -108,5 +108,5 @@ function watch() {
 }
 
 gulp.task('build', gulp.series(clean, gulp.parallel(html, copyFile, style, scripts, img, fonts)));
-
 gulp.task('default', gulp.series('build', watch));
+
